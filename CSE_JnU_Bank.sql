@@ -47,3 +47,16 @@ CREATE TABLE Depositor (
     FOREIGN KEY (customer_name) REFERENCES Customer(customer_name),
     FOREIGN KEY (account_number) REFERENCES Account(account_number)
 );
+
+-- INSERT in branch
+INSERT INTO branch
+VALUES('ISLAMPUR', 'DHAKA', 2000000);
+
+INSERT INTO branch
+VALUES('Jatrabari', 'DHAKA', 5000000);
+
+INSERT INTO branch
+VALUES('Agrabad', 'Chattagram', 1500000);
+
+INSERT INTO branch
+VALUES('Jalalabad', 'Sylhet', 3450000);
