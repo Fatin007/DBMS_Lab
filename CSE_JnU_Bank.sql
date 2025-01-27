@@ -48,7 +48,6 @@ CREATE TABLE Depositor (
     FOREIGN KEY (account_number) REFERENCES Account(account_number)
 );
 
--- INSERT in branch
 INSERT INTO branch
 VALUES('ISLAMPUR', 'DHAKA', 2000000);
 
