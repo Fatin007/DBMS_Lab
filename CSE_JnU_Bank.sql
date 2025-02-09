@@ -98,3 +98,48 @@ VALUES('Ahsanul Hoque Abir', 'ACC1001'),
       ('Ahmed Bin Mustafa', 'ACC1004'),
       ('Khushbul Alam', 'ACC1005');
 
+-- select distinct customer_city
+-- from customer;
+
+-- select account_number, branch_name, balance, balance+balance*.1 as New_Balance
+-- from account;
+
+-- select *
+-- from loan;
+
+-- select *
+-- from loan
+-- where amount>5000;
+
+-- select *
+-- from customer,borrower
+-- where customer.customer_name = borrower.customer_name;
+
+INSERT INTO branch
+VALUES('Perryridge', 'New York', 1000000);
+
+INSERT INTO Account
+VALUES('ACC1006', 'Perryridge', 25000),
+      ('ACC1007', 'Perryridge', 37000),
+      ('ACC1008', 'Perryridge', 90000),
+      ('ACC1009', 'Perryridge', 49000),
+      ('ACC1010', 'Perryridge', 69000);
+      
+INSERT INTO Loan
+VALUES('LN1006', 'Perryridge', 50000),
+      ('LN1007', 'Perryridge', 2000),
+      ('LN1008', 'Perryridge', 10000),
+      ('LN1009', 'Perryridge', 750),
+      ('LN1010', 'Perryridge', 1500);
+      
+-- select *
+-- from account
+-- where branch_name='Perryridge';
+
+-- select *
+-- from loan
+-- where branch_name='Perryridge' and amount>1200;
+
+-- select loan_number, amount
+-- from loan
+-- where amount between 50000 and 100000; --between er kaj shikhlam
