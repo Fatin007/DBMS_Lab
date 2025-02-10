@@ -171,7 +171,7 @@ VALUES('Donald Trump', 'LN1006'),
 -- from branch as T, branch as S
 -- where T.assets>S.assets and s.branch_city='DHAKA';
 
--- find the names of all customers like '%la%'
+-- find the names of all customers like '%Ma%'
 -- select customer_name
 -- from customer
 -- where customer_name like '%Ma%'
