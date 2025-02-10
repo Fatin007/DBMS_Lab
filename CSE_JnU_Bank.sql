@@ -131,15 +131,33 @@ VALUES('LN1006', 'Perryridge', 50000),
       ('LN1008', 'Perryridge', 10000),
       ('LN1009', 'Perryridge', 750),
       ('LN1010', 'Perryridge', 1500);
-      
--- select *
--- from account
--- where branch_name='Perryridge';
 
+-- show all customers who have a loan from branch Perryridge and the amount of the loan is greater than 1200
 -- select *
 -- from loan
 -- where branch_name='Perryridge' and amount>1200;
 
+-- show all customers who have a loan between 50000 and 100000
 -- select loan_number, amount
 -- from loan
 -- where amount between 50000 and 100000; --between er kaj shikhlam
+
+INSERT INTO Customer
+VALUES('Donald Trump', 'Washington', 'LA'),
+      ('Jack Maa', 'Yungwong', 'Beijing'),
+      ('Elon Mask', 'Silicon Vally', 'New York'),
+      ('Cristiano Ronaldo', 'Lisbon', 'Portogal'),
+      ('Leonel Messi', 'HagaLand', 'Buens Aires');
+
+INSERT INTO Borrower
+VALUES('Donald Trump', 'LN1006'),
+      ('Jack Maa', 'LN1007'),
+      ('Elon Mask', 'LN1008'),
+      ('Cristiano Ronaldo', 'LN1009'),
+      ('Leonel Messi', 'LN1010');
+
+-- show loan_number and amount of all loans of branch Perryridge
+-- select customer_name, loan.loan_number as loan_number
+-- from borrower cross join loan 
+-- where loan.branch_name='Perryridge' and loan.loan_number=borrower.loan_number;
+
