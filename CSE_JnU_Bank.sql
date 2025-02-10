@@ -161,3 +161,12 @@ VALUES('Donald Trump', 'LN1006'),
 -- from borrower cross join loan 
 -- where loan.branch_name='Perryridge' and loan.loan_number=borrower.loan_number;
 
+-- show all depositors who have an account in branch Mirpur
+-- select customer_name, depositor.account_number, balance
+-- from depositor cross join account
+-- where account.branch_name='Mirpur' and depositor.account_number=account.account_number;
+
+-- find the names of all branches that have greater assets than some branch located in Brooklyn
+-- select distinct T.branch_name
+-- from branch as T, branch as S
+-- where T.assets>S.assets and s.branch_city='DHAKA';
