@@ -187,15 +187,15 @@ VALUES('Donald Trump', 'LN1006'),
 -- where customer.customer_name=depositor.customer_name and depositor.account_number=account.account_number and account.branch_name='Perryridge' and account.balance<=50000;
 
 -- find the total number of branches
--- select count(branch_name)
+-- select count(branch_name) as Total_Branch
 -- from branch;
 
 -- find the total assets of all branches
--- select sum(assets)
+-- select sum(assets) as Total_Assets
 -- from branch;
 
 -- find the average balance in the account
--- select avg(balance)
+-- select avg(balance) as average_balance
 -- from account;
 
 -- find the maximum loan amount
@@ -203,7 +203,7 @@ VALUES('Donald Trump', 'LN1006'),
 -- from loan;
 
 -- find the minimum balance in the account
--- select min(balance)
+-- select min(balance) as minimum_balance
 -- from account;
 
 -- fint the total loan amount per branch
