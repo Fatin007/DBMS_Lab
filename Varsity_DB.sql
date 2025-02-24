@@ -67,7 +67,6 @@ CREATE TABLE Student (
     FOREIGN KEY (dept_name) REFERENCES Department(dept_name)
 );
 
--- Table: Takes
 CREATE TABLE Takes (
     id VARCHAR(10),
     course_id VARCHAR(10),

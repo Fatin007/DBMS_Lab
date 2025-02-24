@@ -175,3 +175,14 @@ VALUES('Donald Trump', 'LN1006'),
 -- select customer_name
 -- from customer
 -- where customer_name like '%Ma%'
+
+-- find the city of the customers who have deposited money in branch Mirpur
+-- select distinct customer_city
+-- from customer, depositor, account
+-- where customer.customer_name=depositor.customer_name and depositor.account_number=account.account_number and account.branch_name='Mirpur';
+
+-- find the names of the customers who have deposited money Perriyridge with the amount not more than 50000
+-- select customer_name
+-- from customer, depositor, account
+-- where customer.customer_name=depositor.customer_name and depositor.account_number=account.account_number and account.branch_name='Perryridge' and account.balance<=50000;
+
