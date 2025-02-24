@@ -186,3 +186,53 @@ VALUES('Donald Trump', 'LN1006'),
 -- from customer, depositor, account
 -- where customer.customer_name=depositor.customer_name and depositor.account_number=account.account_number and account.branch_name='Perryridge' and account.balance<=50000;
 
+-- find the total number of branches
+-- select count(branch_name)
+-- from branch;
+
+-- find the total assets of all branches
+-- select sum(assets)
+-- from branch;
+
+-- find the average balance in the account
+-- select avg(balance)
+-- from account;
+
+-- find the maximum loan amount
+-- select max(amount) as Maximun_Loan
+-- from loan;
+
+-- find the minimum balance in the account
+-- select min(balance)
+-- from account;
+
+-- fint the total loan amount per branch
+-- select branch_name, sum(amount) as total_loan_amount
+-- from loan
+-- group by branch_name;
+
+-- Find the number of distinct customers who have deposited money.
+-- select count(distinct customer_name) as Distinct_Depositor
+-- from depositor
+
+-- Find the average loan amount per customer who has taken a loan.
+-- select customer_name, avg(amount) as avg_loan_amount
+-- from borrower, loan
+-- where borrower.loan_number=loan.loan_number
+-- group by customer_name;
+
+
+-- Find the number of accounts per branch.
+-- select branch_name, count(account_number) as num_of_account
+-- from account
+-- group by account.branch_name;
+
+INSERT INTO branch
+VALUES('Sadarghat', 'Dhaka', 696969);
+
+-- Find the total assets for each branch with at least one loan.
+-- select branch.branch_name, sum(assets) as total_assets
+-- from branch, loan
+-- where branch.branch_name=loan.branch_name
+-- group by branch.branch_name;
+
