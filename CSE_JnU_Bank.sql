@@ -217,9 +217,9 @@ VALUES('Donald Trump', 'LN1006'),
 
 -- Find the average loan amount per customer who has taken a loan.
 -- select customer_name, avg(amount) as avg_loan_amount
--- from borrower, loan
--- where borrower.loan_number=loan.loan_number
--- group by customer_name;
+-- from borrower as B, loan as L
+-- where B.loan_number=L.loan_number
+-- group by B.customer_name;
 
 -- Find the number of accounts per branch.
 -- select branch_name, count(account_number) as num_of_account
