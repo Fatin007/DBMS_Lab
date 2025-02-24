@@ -221,7 +221,6 @@ VALUES('Donald Trump', 'LN1006'),
 -- where borrower.loan_number=loan.loan_number
 -- group by customer_name;
 
-
 -- Find the number of accounts per branch.
 -- select branch_name, count(account_number) as num_of_account
 -- from account
