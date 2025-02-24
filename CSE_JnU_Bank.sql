@@ -206,7 +206,7 @@ VALUES('Donald Trump', 'LN1006'),
 -- select min(balance) as minimum_balance
 -- from account;
 
--- fint the total loan amount per branch
+-- find the total loan amount per branch
 -- select branch_name, sum(amount) as total_loan_amount
 -- from loan
 -- group by branch_name;
