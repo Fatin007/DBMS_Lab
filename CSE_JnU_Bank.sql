@@ -251,7 +251,19 @@ where branch_name='Perryridge';
 SET sql_safe_updates = 1;
 
 -- Change the city of a customer who lives on a specific street
+SET sql_safe_updates = 0;
+update customer
+set customer_city='Dhaka'
+where customer_street='Rampura';
+SET sql_safe_updates = 1;
+
 -- Reduce the loan amount by 1000 for all loans with an amount greater than 50,000
+SET sql_safe_updates = 0;
+update loan
+set amount=amount-1000
+where amount>10000;
+SET sql_safe_updates = 1;
+
 -- Update the branch name for all accounts that currently belong to a specific branch
 --  Change the street address of a customer who has an account with a specific account number
 -- Increase the balance of all accounts by 5% for customers who live in a specific city
