@@ -265,6 +265,8 @@ where amount>10000;
 SET sql_safe_updates = 1;
 
 -- Update the branch name for all accounts that currently belong to a specific branch
+
+
 --  Change the street address of a customer who has an account with a specific account number
 -- Increase the balance of all accounts by 5% for customers who live in a specific city
 -- Update the loan amount to $0 for all loans that have been fully repaid (assuming fully repaid means amount = 0)
