@@ -244,6 +244,11 @@ where branch_city='DHAKA';
 SET sql_safe_updates = 1;
 
 -- Update the balance of all accounts in a specific branch by adding a $50 bonus
+SET sql_safe_updates = 0;
+update account
+set balance=balance+50
+where branch_name='Perryridge';
+SET sql_safe_updates = 1;
 
 -- Change the city of a customer who lives on a specific street
 -- Reduce the loan amount by 1000 for all loans with an amount greater than 50,000
