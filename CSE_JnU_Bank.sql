@@ -235,3 +235,20 @@ VALUES('Sadarghat', 'Dhaka', 696969);
 -- where branch.branch_name=loan.branch_name
 -- group by branch.branch_name;
 
+
+-- Increase the assets of all branches in a specific city by 10%
+SET sql_safe_updates = 0;
+update branch
+set assets=assets*1.1
+where branch_city='DHAKA';
+SET sql_safe_updates = 1;
+
+-- Update the balance of all accounts in a specific branch by adding a $50 bonus
+
+-- Change the city of a customer who lives on a specific street
+-- Reduce the loan amount by 1000 for all loans with an amount greater than 50,000
+-- Update the branch name for all accounts that currently belong to a specific branch
+--  Change the street address of a customer who has an account with a specific account number
+-- Increase the balance of all accounts by 5% for customers who live in a specific city
+-- Update the loan amount to $0 for all loans that have been fully repaid (assuming fully repaid means amount = 0)
+-- Update the balance of all accounts by 2% for customers who live in a specific city ('Sylhet')
