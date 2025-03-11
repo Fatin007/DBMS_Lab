@@ -237,41 +237,36 @@ VALUES('Sadarghat', 'Dhaka', 696969);
 
 
 -- Increase the assets of all branches in a specific city by 10%
-SET sql_safe_updates = 0;
-update branch
-set assets=assets*1.1
-where branch_city='DHAKA';
-SET sql_safe_updates = 1;
+-- SET sql_safe_updates = 0;
+-- update branch
+-- set assets=assets*1.1
+-- where branch_city='DHAKA';
 
 -- Update the balance of all accounts in a specific branch by adding a $50 bonus
-SET sql_safe_updates = 0;
-update account
-set balance=balance+50
-where branch_name='Perryridge';
-SET sql_safe_updates = 1;
+-- update account
+-- set balance=balance+50
+-- where branch_name='Perryridge';
 
 -- Change the city of a customer who lives on a specific street
-SET sql_safe_updates = 0;
-update customer
-set customer_city='Dhaka'
-where customer_street='Rampura';
-SET sql_safe_updates = 1;
+-- update customer
+-- set customer_city='Dhaka'
+-- where customer_street='Rampura';
 
 -- Reduce the loan amount by 1000 for all loans with an amount greater than 50,000
-SET sql_safe_updates = 0;
-update loan
-set amount=amount-1000
-where amount>10000;
-SET sql_safe_updates = 1;
+-- update loan
+-- set amount=amount-1000
+-- where amount>10000;
 
 -- Update the branch name for all accounts that currently belong to a specific branch
-SET sql_safe_updates = 0;
-update account
-set branch_name='Isalmpur'
-where branch_name='Islapur';
-SET sql_safe_updates = 1;
+-- update account
+-- set branch_name='Isalmpur'
+-- where branch_name='Islapur';
 
 --  Change the street address of a customer who has an account with a specific account number
+-- update customer
+-- set customer_street='Mirpur'
+-- where customer_name in (select customer_name from depositor where account_number='ACC1001');
+
 -- Increase the balance of all accounts by 5% for customers who live in a specific city
 -- Update the loan amount to $0 for all loans that have been fully repaid (assuming fully repaid means amount = 0)
 -- Update the balance of all accounts by 2% for customers who live in a specific city ('Sylhet')
