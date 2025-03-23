@@ -2,50 +2,56 @@ CREATE DATABASE CSE_JnU_Bank;
 
 USE CSE_JnU_Bank;
 
-CREATE TABLE Branch (
-    branch_name VARCHAR(30),
-    branch_city VARCHAR(20),
-    assets NUMERIC(15,3),
-    PRIMARY KEY (branch_name)
+CREATE TABLE Branch
+(
+      branch_name VARCHAR(30),
+      branch_city VARCHAR(20),
+      assets NUMERIC(15,3),
+      PRIMARY KEY (branch_name)
 );
 
-CREATE TABLE Customer (
-    customer_name VARCHAR(30),
-    customer_street VARCHAR(50),
-    customer_city VARCHAR(20),
-    PRIMARY KEY (customer_name)
+CREATE TABLE Customer
+(
+      customer_name VARCHAR(30),
+      customer_street VARCHAR(50),
+      customer_city VARCHAR(20),
+      PRIMARY KEY (customer_name)
 );
 
-CREATE TABLE Loan (
-    loan_number VARCHAR(15),
-    branch_name VARCHAR(30),
-    amount NUMERIC(8,3),
-    PRIMARY KEY (loan_number),
-    FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
+CREATE TABLE Loan
+(
+      loan_number VARCHAR(15),
+      branch_name VARCHAR(30),
+      amount NUMERIC(8,3),
+      PRIMARY KEY (loan_number),
+      FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
 );
 
-CREATE TABLE Borrower (
-    customer_name VARCHAR(30),
-    loan_number VARCHAR(15),
-    PRIMARY KEY (customer_name, loan_number),
-    FOREIGN KEY (customer_name) REFERENCES Customer(customer_name),
-    FOREIGN KEY (loan_number) REFERENCES Loan(loan_number)
+CREATE TABLE Borrower
+(
+      customer_name VARCHAR(30),
+      loan_number VARCHAR(15),
+      PRIMARY KEY (customer_name, loan_number),
+      FOREIGN KEY (customer_name) REFERENCES Customer(customer_name),
+      FOREIGN KEY (loan_number) REFERENCES Loan(loan_number)
 );
 
-CREATE TABLE Account (
-    account_number VARCHAR(15),
-    branch_name VARCHAR(30),
-    balance NUMERIC(12,3),
-    PRIMARY KEY (account_number),
-    FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
+CREATE TABLE Account
+(
+      account_number VARCHAR(15),
+      branch_name VARCHAR(30),
+      balance NUMERIC(12,3),
+      PRIMARY KEY (account_number),
+      FOREIGN KEY (branch_name) REFERENCES Branch(branch_name)
 );
 
-CREATE TABLE Depositor (
-    customer_name VARCHAR(30),
-    account_number VARCHAR(15),
-    PRIMARY KEY (customer_name, account_number),
-    FOREIGN KEY (customer_name) REFERENCES Customer(customer_name),
-    FOREIGN KEY (account_number) REFERENCES Account(account_number)
+CREATE TABLE Depositor
+(
+      customer_name VARCHAR(30),
+      account_number VARCHAR(15),
+      PRIMARY KEY (customer_name, account_number),
+      FOREIGN KEY (customer_name) REFERENCES Customer(customer_name),
+      FOREIGN KEY (account_number) REFERENCES Account(account_number)
 );
 
 INSERT INTO branch
@@ -69,7 +75,7 @@ VALUES('Ahsanul Hoque Abir', 'Rampura', 'DHAKA'),
       ('Fabiha Islam', 'Halishohor', 'Chattagram'),
       ('Ahmed Bin Mustafa', 'Shahjalal Uposhohor', 'Sylhet'),
       ('Khushbul Alam', 'Mirpur', 'Khulna');
-      
+
 INSERT INTO Loan
 VALUES('LN1001', 'ISLAMPUR', 50000),
       ('LN1002', 'Jatrabari', 2000),
@@ -83,7 +89,7 @@ VALUES('Ahsanul Hoque Abir', 'LN1001'),
       ('Fabiha Islam', 'LN1003'),
       ('Ahmed Bin Mustafa', 'LN1004'),
       ('Khushbul Alam', 'LN1005');
-      
+
 INSERT INTO Account
 VALUES('ACC1001', 'ISLAMPUR', 25000),
       ('ACC1002', 'Jatrabari', 50000),
@@ -98,6 +104,7 @@ VALUES('Ahsanul Hoque Abir', 'ACC1001'),
       ('Ahmed Bin Mustafa', 'ACC1004'),
       ('Khushbul Alam', 'ACC1005');
 
+-- Find all customer cities
 -- select distinct customer_city
 -- from customer;
 
@@ -124,7 +131,7 @@ VALUES('ACC1006', 'Perryridge', 25000),
       ('ACC1008', 'Perryridge', 90000),
       ('ACC1009', 'Perryridge', 49000),
       ('ACC1010', 'Perryridge', 69000);
-      
+
 INSERT INTO Loan
 VALUES('LN1006', 'Perryridge', 50000),
       ('LN1007', 'Perryridge', 2000),
@@ -270,3 +277,19 @@ VALUES('Sadarghat', 'Dhaka', 696969);
 -- Increase the balance of all accounts by 5% for customers who live in a specific city
 -- Update the loan amount to $0 for all loans that have been fully repaid (assuming fully repaid means amount = 0)
 -- Update the balance of all accounts by 2% for customers who live in a specific city ('Sylhet')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
